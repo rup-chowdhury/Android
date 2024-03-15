@@ -6,23 +6,22 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class newUser extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.new_user);
 
-        Button signUp;
+        Button signIn;
 
-        signUp = (android.widget.Button)findViewById(R.id.registerUser);
+        signIn = (android.widget.Button)findViewById(R.id.log_in);
 
-        signUp.setOnClickListener(new View.OnClickListener() {
+        signIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, newUser.class);
+                Intent intent = new Intent(newUser.this, MainActivity.class);
 
                 startActivity(intent);
             }

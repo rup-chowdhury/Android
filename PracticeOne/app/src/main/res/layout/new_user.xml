@@ -78,7 +78,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="240dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:paddingBottom="5dp"
@@ -94,16 +94,18 @@
             android:textSize="16sp"
             >
         </TextView>
-        <TextView
-            android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/log_in"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="#2B2339"
             android:text="Log In"
             android:textStyle="bold"
             android:textColor="#B81919"
-            android:gravity="center"
+            android:gravity="left"
             android:textSize="18sp">
-        </TextView>
+        </Button>
     </LinearLayout>
 
 </LinearLayout>
