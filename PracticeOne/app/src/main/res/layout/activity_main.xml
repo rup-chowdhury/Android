@@ -32,8 +32,8 @@
         android:layout_marginBottom="20dp"
         android:background="#54FFFFFF"
         android:backgroundTint="#ABA2BA"
+        android:drawableLeft="@mipmap/username_round"
         android:fontFamily="@font/sarpanch"
-        android:drawableLeft="@drawable/username_background"
         android:hint="@string/usernameBox"
         android:textColorHint="#5EFFFFFF"
         android:textSize="22sp" />
