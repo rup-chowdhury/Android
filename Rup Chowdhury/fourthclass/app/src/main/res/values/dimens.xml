@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="vertical_gap">20dp</dimen>
+    <dimen name="button_size">130dp</dimen>
+    <dimen name="button_gap">5dp</dimen>
+</resources>
