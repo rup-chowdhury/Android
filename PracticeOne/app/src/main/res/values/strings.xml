@@ -3,4 +3,5 @@
     <string name="login">Login</string>
     <string name="usernameBox">Enter Username</string>
     <string name="passwordBox">Enter Password</string>
+    <string name="email_box">Enter E-mail</string>
 </resources>
