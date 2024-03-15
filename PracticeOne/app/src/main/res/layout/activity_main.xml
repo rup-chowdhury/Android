@@ -5,6 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
+    android:paddingHorizontal="40dp"
+    android:orientation="vertical"
     android:background="#2B2339"
     tools:context=".MainActivity">
 
@@ -12,7 +15,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="casual"
-        android:gravity="bottom"
         android:text="@string/login"
         android:textSize="45sp"
         android:textStyle="bold"
@@ -22,5 +24,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#54FFFFFF"
+        android:backgroundTint="#ABA2BA"
+        android:hint="@string/usernameBox"
+        android:textColorHint="#5EFFFFFF"
+        android:textSize="22sp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#54FFFFFF"
+        android:backgroundTint="#ABA2BA"
+        android:hint="@string/passwordBox"
+        android:textColorHint="#5EFFFFFF"
+        android:textSize="22sp"
+        />
 
 </LinearLayout>
