@@ -22,27 +22,30 @@
         android:background="#2B2339"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         android:background="#54FFFFFF"
         android:backgroundTint="#ABA2BA"
+        android:fontFamily="@font/sarpanch"
+        android:drawableLeft="@drawable/username_background"
         android:hint="@string/usernameBox"
         android:textColorHint="#5EFFFFFF"
-        android:textSize="22sp"
-        />
+        android:textSize="22sp" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#54FFFFFF"
         android:backgroundTint="#ABA2BA"
+        android:fontFamily="@font/sarpanch"
         android:hint="@string/passwordBox"
         android:textColorHint="#5EFFFFFF"
-        android:textSize="22sp"
-        />
+        android:textSize="22sp" />
 
 </LinearLayout>
