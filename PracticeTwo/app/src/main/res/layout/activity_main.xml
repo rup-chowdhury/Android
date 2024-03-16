@@ -46,19 +46,122 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="FASTNAME LASTNAME"
-            android:textSize="20sp"
-            android:backgroundTint="@color/white"
-            android:background="@color/white"
+
             android:textColor="#3AAD4D"
+            android:textSize="20sp"
+            android:textStyle="bold"
 
             />
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="College Name" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="75dp"
+                android:layout_marginLeft="190dp"
+                android:background="@drawable/sharp_account_circle_24"
+                android:backgroundTint="#3AAC4D"
+                android:drawableTint="#3AAC4D"
+                android:foregroundTint="#3AAC4D"
+                android:textColor="#3AAC4D"
+                android:textColorHighlight="#3AAC4D"
+                android:textColorLink="#3AAD4D"
+                app:iconTint="#3AAC4D"
+                app:rippleColor="#3AAC4D" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#3AAD4D"
+                android:text="TODO LIST" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:text="EDIT PROFILE"
+                android:textColor="#3AAD4D" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="110dp"
+            android:backgroundTint="@color/white"
+            android:textSize="16dp"
+            android:drawableTop="@drawable/round_draw_24"
+            android:text="CONTRIBUTE"
+            android:textColor="#3AAD4D"
+            android:layout_marginRight="15dp"
+            app:cornerRadius="12dp" />
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="110dp"
+            android:backgroundTint="@color/white"
+            android:textSize="16dp"
+            android:drawableTop="@drawable/baseline_code_24"
+            android:text="PRACTICE"
+            android:textColor="#3AAD4D"
+            app:cornerRadius="12dp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
     </LinearLayout>
 </LinearLayout>
