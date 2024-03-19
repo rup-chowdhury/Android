@@ -5,14 +5,77 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginHorizontal="30dp"
+    android:orientation="vertical"
     android:gravity="center"
     tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_weight="0.8">
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="cursive"
+        android:gravity="center"
+        android:text="@string/login"
+        android:textSize="48sp"
+        android:paddingBottom="25dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#0F000000"
+        android:hint="Username"
+        android:paddingLeft="10dp"
+        android:textColorHint="#7C000000"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#0F000000"
+        android:hint="Password"
+        android:layout_marginVertical="25dp"
+        android:paddingLeft="10dp"
+        android:textColorHint="#7E000000"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:backgroundTint="#3A4EBA"
+        android:text="@string/login"
+        android:textSize="20sp"
+        />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Hello World!"
+        android:text="Forgot Password ?"
+        android:paddingTop="20dp"
+        android:textSize="18sp"
         />
+    </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+
+        android:layout_weight="9"
+        >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Up Here"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#583793"
+        />
+</LinearLayout>
 </LinearLayout>
