@@ -34,7 +34,7 @@
             android:layout_marginHorizontal="@dimen/button_gap"
             android:layout_weight="1"
             android:text="AC"
-            android:textSize="@dimen/button_text_size"
+            android:textSize="20sp"
             android:backgroundTint="#4B4D55"/>
 
         <Button
@@ -43,7 +43,7 @@
             android:layout_marginHorizontal="@dimen/button_gap"
             android:layout_weight="1"
             android:text="+/-"
-            android:textSize="@dimen/button_text_size"
+            android:textSize="20sp"
             android:backgroundTint="#4B4D55"/>
 
         <Button
