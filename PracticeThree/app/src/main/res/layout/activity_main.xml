@@ -100,6 +100,7 @@
             android:textSize="@dimen/button_text_size"/>
 
         <Button
+            android:id="@+id/button_nine"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/button_height"
             android:layout_marginHorizontal="@dimen/button_gap"
@@ -110,6 +111,7 @@
             android:textSize="@dimen/button_text_size"/>
 
         <Button
+            android:id="@+id/button_multiply"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/button_height"
             android:layout_marginHorizontal="@dimen/button_gap"
@@ -127,6 +129,7 @@
         android:layout_weight="1"
         >
         <Button
+            android:id="@+id/button_four"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/button_height"
             android:layout_marginHorizontal="@dimen/button_gap"
@@ -137,6 +140,7 @@
             android:textSize="@dimen/button_text_size"/>
 
         <Button
+            android:id="@+id/button_five"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/button_height"
             android:layout_marginHorizontal="@dimen/button_gap"
