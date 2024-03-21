@@ -10,6 +10,7 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/text_screen"
         android:layout_width="match_parent"
         android:layout_height="170dp"
         android:text=""
@@ -29,6 +30,7 @@
         android:layout_weight="1"
         >
         <Button
+            android:id="@+id/button_ac"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/button_height"
             android:layout_marginHorizontal="@dimen/button_gap"
@@ -38,6 +40,7 @@
             android:backgroundTint="#4B4D55"/>
 
         <Button
+            android:id="@+id/button_plus_minus"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/button_height"
             android:layout_marginHorizontal="@dimen/button_gap"
@@ -47,6 +50,7 @@
             android:backgroundTint="#4B4D55"/>
 
         <Button
+            android:id="@+id/button_percentage"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/button_height"
             android:layout_marginHorizontal="@dimen/button_gap"
@@ -56,6 +60,7 @@
             android:backgroundTint="#4B4D55"/>
 
         <Button
+            android:id="@+id/button_division"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/button_height"
             android:layout_marginHorizontal="@dimen/button_gap"
@@ -73,6 +78,7 @@
         android:layout_weight="1"
         >
         <Button
+            android:id="@+id/button_seven"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/button_height"
             android:layout_marginHorizontal="@dimen/button_gap"
@@ -83,6 +89,7 @@
             android:textSize="@dimen/button_text_size"/>
 
         <Button
+            android:id="@+id/button_eight"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/button_height"
             android:layout_marginHorizontal="@dimen/button_gap"
