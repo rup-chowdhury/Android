@@ -24,5 +24,14 @@ public class MainActivity extends AppCompatActivity {
         btnEight = findViewById(R.id.button_eight);
         btnNine = findViewById(R.id.button_nine);
         btnZero = findViewById(R.id.button_zero);
+        btnAC = findViewById(R.id.button_ac);
+        btnPlusMinus = findViewById(R.id.button_plus_minus);
+        btnPercentage = findViewById(R.id.button_percentage);
+        btnDivision = findViewById(R.id.button_division);
+        btnMultiply = findViewById(R.id.button_multiply);
+        btnMinus = findViewById(R.id.button_minus);
+        btnPlus = findViewById(R.id.button_plus);
+        btnEqual = findViewById(R.id.button_equal);
+        btnDot = findViewById(R.id.button_dot);
     }
 }
