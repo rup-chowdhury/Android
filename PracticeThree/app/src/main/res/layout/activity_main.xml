@@ -180,6 +180,7 @@
         android:layout_weight="1"
         >
         <Button
+            android:id="@+id/button_one"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/button_height"
             android:layout_marginHorizontal="@dimen/button_gap"
@@ -190,6 +191,7 @@
             android:textSize="@dimen/button_text_size"/>
 
         <Button
+            android:id="@+id/button_two"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/button_height"
             android:layout_marginHorizontal="@dimen/button_gap"
@@ -200,6 +202,7 @@
             android:textSize="@dimen/button_text_size"/>
 
         <Button
+            android:id="@+id/button_three"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/button_height"
             android:layout_marginHorizontal="@dimen/button_gap"
@@ -210,6 +213,7 @@
             android:textSize="@dimen/button_text_size"/>
 
         <Button
+            android:id="@+id/button_plus"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/button_height"
             android:layout_marginHorizontal="@dimen/button_gap"
@@ -228,6 +232,7 @@
         >
 
         <Button
+            android:id="@+id/button_zero"
             android:layout_width="180dp"
             android:layout_height="@dimen/button_height"
             android:backgroundTint="#AEAEAE"
