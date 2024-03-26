@@ -4,11 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     Button btnOne, btnTwo, btnThree, btnFour, btnFive, btnSix, btnSeven, btnEight, btnNine, btnZero, btnAC, btnPlusMinus, btnPercentage, btnDivision, btnMultiply, btnMinus, btnPlus, btnEqual, btnDot;
 
+    TextView txtScreen;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,5 +35,7 @@ public class MainActivity extends AppCompatActivity {
         btnPlus = findViewById(R.id.button_plus);
         btnEqual = findViewById(R.id.button_equal);
         btnDot = findViewById(R.id.button_dot);
+
+        txtScreen = findViewById(R.id.text_screen);
     }
 }
