@@ -45,6 +45,76 @@ public class MainActivity extends AppCompatActivity {
                 txtScreen.setText("1");
             }
         });
+
+        btnTwo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                txtScreen.setText("2");
+            }
+        });
+
+        btnThree.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                txtScreen.setText("3");
+            }
+        });
+
+        btnFour.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                txtScreen.setText("4");
+            }
+        });
+
+        btnFive.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                txtScreen.setText("5");
+            }
+        });
+
+        btnSix.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                txtScreen.setText("6");
+            }
+        });
+
+        btnSeven.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                txtScreen.setText("7");
+            }
+        });
+
+        btnEight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                txtScreen.setText("8");
+            }
+        });
+
+        btnNine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                txtScreen.setText("9");
+            }
+        });
+
+        btnZero.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                txtScreen.setText("0");
+            }
+        });
+
+        btnDot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                txtScreen.setText(".");
+            }
+        });
     }
 }
 
