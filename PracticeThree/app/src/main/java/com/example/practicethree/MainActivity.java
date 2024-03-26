@@ -3,6 +3,7 @@ package com.example.practicethree;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -37,5 +38,29 @@ public class MainActivity extends AppCompatActivity {
         btnDot = findViewById(R.id.button_dot);
 
         txtScreen = findViewById(R.id.text_screen);
+
+        btnOne.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
