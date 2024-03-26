@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     Button btnOne, btnTwo, btnThree, btnFour, btnFive, btnSix, btnSeven, btnEight, btnNine, btnZero, btnAC, btnPlusMinus, btnPercentage, btnDivision, btnMultiply, btnMinus, btnPlus, btnEqual, btnDot;
 
@@ -116,6 +116,11 @@ public class MainActivity extends AppCompatActivity {
                 txtScreen.setText(".");
             }
         });
+    }
+
+    @Override
+    public void onClick(View v) {
+
     }
 }
 
