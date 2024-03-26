@@ -42,7 +42,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                txtScreen.setText("1");
+                String input = txtScreen.getText().toString();
+                txtScreen.setText(input + "1");
             }
         });
 
@@ -50,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onClick(View v) {
                 String input = txtScreen.getText().toString();
-                txtScreen.setText("2");
+                txtScreen.setText(input +"2");
             }
         });
 
