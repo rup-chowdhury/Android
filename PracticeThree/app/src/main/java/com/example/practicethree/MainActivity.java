@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         btnTwo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String input = txtScreen.getText().toString();
                 txtScreen.setText("2");
             }
         });
