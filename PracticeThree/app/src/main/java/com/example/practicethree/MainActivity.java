@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         btnOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                v.
+                txtScreen.setText("1");
             }
         });
     }
