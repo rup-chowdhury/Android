@@ -124,7 +124,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         String input = txtScreen.getText().toString();
 
-        
+        if (v.getId() == R.id.button_one){
+            txtScreen.setText(input + "1");
+        } 
+
     }
 }
 
