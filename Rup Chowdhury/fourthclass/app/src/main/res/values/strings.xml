@@ -3,4 +3,19 @@
     <string name="login_text">Login</string>
     <string name="username_box">Username</string>
     <string name="password_box">Password</string>
+
+    <string-array name="kobis">
+        <item>Rup</item>
+        <item>Kazi</item>
+        <item>Robin</item>
+
+    </string-array>
+
+    <string-array name="dob">
+        <item>1999</item>
+        <item>1899</item>
+        <item>1870</item>
+
+
+    </string-array>
 </resources>
