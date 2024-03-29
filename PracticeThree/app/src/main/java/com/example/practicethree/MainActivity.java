@@ -39,84 +39,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         txtScreen = findViewById(R.id.text_screen);
 
-        btnOne.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String input = txtScreen.getText().toString();
-                txtScreen.setText(input + "1");
-            }
-        });
-
-        btnTwo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String input = txtScreen.getText().toString();
-                txtScreen.setText(input +"2");
-            }
-        });
-
-        btnThree.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                txtScreen.setText("3");
-            }
-        });
-
-        btnFour.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                txtScreen.setText("4");
-            }
-        });
-
-        btnFive.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                txtScreen.setText("5");
-            }
-        });
-
-        btnSix.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                txtScreen.setText("6");
-            }
-        });
-
-        btnSeven.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                txtScreen.setText("7");
-            }
-        });
-
-        btnEight.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                txtScreen.setText("8");
-            }
-        });
-
-        btnNine.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                txtScreen.setText("9");
-            }
-        });
-
-        btnZero.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                txtScreen.setText("0");
-            }
-        });
-
-        btnDot.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                txtScreen.setText(".");
-            }
-        });
+        btnOne.setOnClickListener(this);
+        btnTwo.setOnClickListener(this);
+        btnThree.setOnClickListener(this);
+        btnFour.setOnClickListener(this);
+        btnFive.setOnClickListener(this);
+        btnSix.setOnClickListener(this);
+        btnSeven.setOnClickListener(this);
+        btnEight.setOnClickListener(this);
+        btnNine.setOnClickListener(this);
+        btnZero.setOnClickListener(this);
     }
 
     @Override
