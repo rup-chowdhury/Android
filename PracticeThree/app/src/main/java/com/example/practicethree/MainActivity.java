@@ -80,6 +80,42 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.button_two:
                 txtScreen.setText(input + "2");
                 break;
+
+            case R.id.button_three:
+                txtScreen.setText(input + "3");
+                break;
+
+            case R.id.button_four:
+                txtScreen.setText(input + "4");
+                break;
+
+            case R.id.button_five:
+                txtScreen.setText(input + "5");
+                break;
+
+            case R.id.button_six:
+                txtScreen.setText(input + "6");
+                break;
+
+            case R.id.button_seven:
+                txtScreen.setText(input + "7");
+                break;
+
+            case R.id.button_eight:
+                txtScreen.setText(input + "8");
+                break;
+
+            case R.id.button_nine:
+                txtScreen.setText(input + "9");
+                break;
+
+            case R.id.button_zero:
+                txtScreen.setText(input + "0");
+                break;
+
+            case R.id.button_dot:
+                txtScreen.setText(input + ".");
+                break;
         }
 
     }
