@@ -126,7 +126,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if (v.getId() == R.id.button_one){
             txtScreen.setText(input + "1");
-        } 
+        } else if (v.getId() == R.id.button_two){
+            txtScreen.setText(input + "2");
+        }
 
     }
 }
