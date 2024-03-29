@@ -49,6 +49,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnEight.setOnClickListener(this);
         btnNine.setOnClickListener(this);
         btnZero.setOnClickListener(this);
+        btnAC.setOnClickListener(this);
+        btnPlusMinus.setOnClickListener(this);
+        btnPercentage.setOnClickListener(this);
+        btnDivision.setOnClickListener(this);
+        btnMultiply.setOnClickListener(this);
+        btnMinus.setOnClickListener(this);
+        btnPlus.setOnClickListener(this);
+        btnEqual.setOnClickListener(this);
+        btnDot.setOnClickListener(this);
+
     }
 
     @Override
@@ -56,10 +66,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         String input = txtScreen.getText().toString();
 
-        if (v.getId() == R.id.button_one){
-            txtScreen.setText(input + "1");
-        } else if (v.getId() == R.id.button_two){
-            txtScreen.setText(input + "2");
+//        if (v.getId() == R.id.button_one){
+//            txtScreen.setText(input + "1");
+//        } else if (v.getId() == R.id.button_two){
+//            txtScreen.setText(input + "2");
+//        }
+
+        switch (v.getId()){
+            case R.id.button_one:
+                txtScreen.setText(input + "1");
+                break;
+
+            case R.id.button_two:
+                txtScreen.setText(input + "2");
+                break;
         }
 
     }
