@@ -19,6 +19,7 @@
             android:id="@+id/txt_lekhok"
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:paddingLeft="5dp"
             android:paddingTop="10dp"
             android:fontFamily="cursive"
             android:textSize="25sp" />
@@ -26,6 +27,7 @@
         <TextView
             android:id="@+id/txt_dob"
             android:layout_width="match_parent"
+            android:paddingLeft="5dp"
             android:layout_height="40dp"
             android:textSize="20sp"
             />
