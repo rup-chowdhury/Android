@@ -6,6 +6,12 @@ import android.widget.BaseAdapter;
 
 public class CustomLekhokListAdapter extends BaseAdapter {
 
+    String[] lekhokName;
+
+    String[] lekhokBirth;
+
+    
+
     @Override
     public int getCount() {
         return 0;
