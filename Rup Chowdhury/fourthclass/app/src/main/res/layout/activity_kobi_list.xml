@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".KobiList">
 
-
     <ListView
         android:id="@+id/lst_kobi"
         android:layout_width="match_parent"
