@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">KobitaSomuho</string>
+
+    <string-array name="lekhokname">
+        <item>সৈয়দ মুজতবা আলী</item>
+        <item>মানিক বন্ধোপাধ্যায়</item>
+        <item>সত্যজিৎ রায়</item>
+        <item>সৈয়দ মুস্তফা সিরাজ</item>
+        <item>বিভূতিভূষণ বন্ধোপাধ্যায়</item>
+    </string-array>
+
+    <string-array name="lekhokbirth">
+        <item>September 13, 1904</item>
+        <item>May 19, 1908</item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
 </resources>

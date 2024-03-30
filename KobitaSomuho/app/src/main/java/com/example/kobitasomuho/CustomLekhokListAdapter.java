@@ -12,7 +12,7 @@ public class CustomLekhokListAdapter extends BaseAdapter {
 
     int lekhokPicture;
 
-    
+
 
     @Override
     public int getCount() {
