@@ -11,7 +11,7 @@ public class LekhokList extends AppCompatActivity {
 
     String[] dob;
 
-    ListView
+    ListView listLekhok;
 
     int[] images = {R.drawable.mujtaba, R.drawable.manik, R.drawable.satyajit, R.drawable.siraj, R.drawable.bivuti};
     @Override
@@ -19,10 +19,12 @@ public class LekhokList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lekhok_list);
 
-        lstKobis = findViewById(R.id.lst_kobi);
+        listLekhok = findViewById(R.id.lst_lekhok);
 
-        kobis = getResources().getStringArray(R.array.kobis);
+        lekhok = getResources().getStringArray(R.array.lekhokname);
 
-        dob = getResources().getStringArray(R.array.dob);
+        dob = getResources().getStringArray(R.array.lekhokbirth);
+
+
     }
 }

@@ -9,7 +9,7 @@
     tools:context=".LekhokList">
 
     <ListView
-        android:id="@+id/lst_kobi"
+        android:id="@+id/lst_lekhok"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         />
