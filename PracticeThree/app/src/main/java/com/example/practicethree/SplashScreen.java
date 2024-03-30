@@ -21,14 +21,22 @@ public class SplashScreen extends AppCompatActivity {
         actSplash.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
                 Intent i = new Intent(SplashScreen.this, MainActivity.class);
 
                 startActivity(i);
-
-                //startActivity(new Intent(SplashScreen.this, MainActivity.class));
             }
+        });
+
+        //        llSplash.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//
+//                Intent i = new Intent(SplashScreen.this, MainActivity.class);
+//
+//                startActivity(i);
+//
+//                //startActivity(new Intent(SplashScreen.this, MainActivity.class));
+//            }
     }
-}
 }
