@@ -3,7 +3,10 @@ package com.example.kobitasomuho;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class LekhokList extends AppCompatActivity {
 
@@ -26,5 +29,13 @@ public class LekhokList extends AppCompatActivity {
         dob = getResources().getStringArray(R.array.lekhokbirth);
 
 
+        listLekhok.setAdapter(new CustomLekhokListAdapter(lekhok, dob, images, LekhokList.this));
+
+        listLekhok.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(LekhokList.this, lekhok[position], Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
