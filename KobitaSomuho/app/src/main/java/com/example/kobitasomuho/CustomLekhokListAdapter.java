@@ -10,6 +10,8 @@ public class CustomLekhokListAdapter extends BaseAdapter {
 
     String[] lekhokBirth;
 
+    int lekhokPicture;
+
     
 
     @Override
