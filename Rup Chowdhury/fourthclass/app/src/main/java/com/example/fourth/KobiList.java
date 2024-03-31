@@ -34,6 +34,8 @@ public class KobiList extends AppCompatActivity {
         dob = getResources().getStringArray(R.array.dob);
 
         lstKobis.setAdapter(new CustomKobiAdapter(KobiList.this, kobis, dob, images));
+
+        
         //lstKobis.setAdapter(new ArrayAdapter<String>(KobiList.this, R.layout.item_kobi_list, R.id.txt_kobi , kobis));
 
 
