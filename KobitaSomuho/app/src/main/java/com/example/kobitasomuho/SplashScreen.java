@@ -2,11 +2,13 @@ package com.example.kobitasomuho;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 
+@SuppressLint("CustomSplashScreen")
 public class SplashScreen extends AppCompatActivity {
 
     @Override
@@ -15,13 +17,21 @@ public class SplashScreen extends AppCompatActivity {
         setContentView(R.layout.activity_splash_screen);
 
         Log.e("Rup","onCreate");
-        new Handler().postDelayed(new Runnable() {  //Delay Timer on Splash screen
+
+        new Thread(){
+
             @Override
             public void run() {
-                startActivity(new Intent(SplashScreen.this, LekhokList.class));
-            finish();
+                super.run();
+
+                try {
+                    sleep(3000);
+                    startActivity(new Intent(SplashScreen.this, LekhokList.class));
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
             }
-        },2000);
+        }.start();
         }
 
     @Override
@@ -50,6 +60,7 @@ public class SplashScreen extends AppCompatActivity {
         super.onPause();
 
         Log.e("Rup","onPause");
+
     }
 
     @Override
