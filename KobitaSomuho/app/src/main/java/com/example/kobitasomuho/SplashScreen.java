@@ -34,25 +34,35 @@ public class SplashScreen extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+
+        Log.e("Rup","onResume");
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
+
+        Log.e("Rup","onRestart");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
+
+        Log.e("Rup","onPause");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
+
+        Log.e("Rup","onStop");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
+
+        Log.e("Rup","onDestroy");
     }
 }
