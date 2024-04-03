@@ -37,7 +37,7 @@ public class LekhokList extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(LekhokList.this, lekhok[position], Toast.LENGTH_SHORT).show();
 
-                startActivity(new Intent(LekhokList.this, Golpo.class));
+                startActivity(new Intent(LekhokList.this, GolpoNameMujtaba.class));
             }
         });
     }

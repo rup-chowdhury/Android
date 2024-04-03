@@ -2,12 +2,12 @@ package com.example.kobitasomuho;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 
-public class Golpo extends AppCompatActivity {
+public class GolpoNameMujtaba extends AppCompatActivity {
 
     String[] golpoName;
 
@@ -26,6 +26,9 @@ public class Golpo extends AppCompatActivity {
 
         golpoName = getResources().getStringArray(R.array.golponame);
 
-        listGolpo.setAdapter(new ArrayAdapter<String>(Golpo.this, android.R.layout.simple_list_item_1, golpoName));
+        listGolpo.setAdapter(new ArrayAdapter<String>(GolpoNameMujtaba.this, android.R.layout.simple_list_item_1, golpoName));
+
+        
+        startActivity(new Intent(GolpoNameMujtaba.this, GolpoMujtaba.class));
     }
 }
