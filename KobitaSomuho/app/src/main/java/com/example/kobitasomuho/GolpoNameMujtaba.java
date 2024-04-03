@@ -2,9 +2,10 @@ package com.example.kobitasomuho;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.LauncherActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -29,7 +30,16 @@ public class GolpoNameMujtaba extends AppCompatActivity {
 
         listGolpo.setAdapter(new ArrayAdapter<String>(GolpoNameMujtaba.this, android.R.layout.simple_list_item_1, golpoName));
 
-        
-        startActivity(new Intent(GolpoNameMujtaba.this, GolpoMujtaba.class));
+        listGolpo.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+
+                if (position == 0){
+                    startActivity(new Intent(GolpoNameMujtaba.this, GolpoMujtaba1.class));
+                }
+            }
+        });
+
     }
 }
