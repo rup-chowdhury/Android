@@ -61,6 +61,8 @@ public class SplashScreen extends AppCompatActivity {
 
         Log.e("Rup","onPause");
 
+        finish();
+
     }
 
     @Override
