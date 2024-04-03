@@ -2,6 +2,7 @@ package com.example.kobitasomuho;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.LauncherActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
