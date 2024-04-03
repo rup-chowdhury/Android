@@ -26,6 +26,6 @@ public class Golpo extends AppCompatActivity {
 
         golpoName = getResources().getStringArray(R.array.golponame);
 
-        listGolpo.setAdapter(new ArrayAdapter<String>(Golpo.this, android.R.layout.simple_list_item_1, listGolpo));
+        listGolpo.setAdapter(new ArrayAdapter<String>(Golpo.this, android.R.layout.simple_list_item_1, golpoName));
     }
 }
