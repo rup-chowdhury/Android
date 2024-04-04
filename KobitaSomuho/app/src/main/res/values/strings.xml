@@ -22,6 +22,10 @@
         <item>রসগোল্লা</item>
     </string-array>
 
+    <string-array name="golponamemanik">
+        <item>প্রাগৈতিহাসিক</item>
+    </string-array>
+
 
     <string name="golpo1">বাসা পেলুম কাবুল থেকে আড়াই মাইল দূরে খাজামোল্লা গ্রামে। বাসার সঙ্গে সঙ্গে চাকরও পেলুম।
 

@@ -7,6 +7,7 @@
     tools:context=".GolpoListManik">
 
     <ListView
+        android:id="@+id/lst_golpo_manik"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
 
