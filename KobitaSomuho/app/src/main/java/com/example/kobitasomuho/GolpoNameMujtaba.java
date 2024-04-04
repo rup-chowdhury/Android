@@ -39,7 +39,7 @@ public class GolpoNameMujtaba extends AppCompatActivity {
                     startActivity(new Intent(GolpoNameMujtaba.this, GolpoMujtaba1.class));
                 } else if (position == 1) {
                     startActivity(new Intent(GolpoNameMujtaba.this, GolpoMujtaba2.class));
-                    
+
                 }
             }
         });
