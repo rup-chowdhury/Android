@@ -9,17 +9,18 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        >
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-178dp">
 
-    <TextView
-        android:paddingHorizontal="10dp"
-        android:paddingTop="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/golpo1"
-        android:justificationMode="inter_word"
-        android:textSize="25sp"
-        tools:targetApi="o" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:justificationMode="inter_word"
+            android:paddingHorizontal="10dp"
+            android:paddingTop="20dp"
+            android:text="@string/golpo1"
+            android:textSize="25sp"
+            tools:targetApi="o" />
 
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
