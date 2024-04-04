@@ -13,6 +13,9 @@
         android:theme="@style/Theme.KobitaSomuho"
         tools:targetApi="31">
         <activity
+            android:name=".GolpoListManik"
+            android:exported="false" />
+        <activity
             android:name=".GolpoMujtaba2"
             android:exported="false" />
         <activity
