@@ -39,6 +39,8 @@ public class LekhokList extends AppCompatActivity {
 
                 if (position == 0) {
                     startActivity(new Intent(LekhokList.this, GolpoNameMujtaba.class));
+                } else if (position == 1) {
+                    startActivity(new Intent(LekhokList.this, GolpoListManik.class));
                 }
             }
         });

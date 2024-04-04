@@ -2,6 +2,7 @@ package com.example.kobitasomuho;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -23,6 +24,15 @@ public class GolpoListManik extends AppCompatActivity {
 
         golpoName = getResources().getStringArray(R.array.golponamemanik);
 
-        lstGolpo.setAdapter(new ArrayAdapter<String>(GolpoListManik.this, android.R.layout.simple_list_item_1, ));
+        lstGolpo.setAdapter(new ArrayAdapter<String>(GolpoListManik.this, android.R.layout.simple_list_item_1, golpoName));
+
+        lstGolpo.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if (position == 0){
+                    startActivity(new Intent(GolpoListManik.this, GolpoManik1.class));
+                }
+            }
+        });
     }
 }
