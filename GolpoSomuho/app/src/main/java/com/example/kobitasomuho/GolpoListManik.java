@@ -34,6 +34,11 @@ public class GolpoListManik extends AppCompatActivity {
                     ca.putExtra("manik", "mone");
                     startActivity(ca);
                 }
+                else if (position == 1){
+                    Intent ca = new Intent(getApplicationContext(), ReadStory.class);
+                    ca.putExtra("manik", "mtwo");
+                    startActivity(ca);
+                }
             }
         });
     }

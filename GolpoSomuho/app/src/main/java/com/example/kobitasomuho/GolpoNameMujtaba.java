@@ -30,19 +30,19 @@ public class GolpoNameMujtaba extends AppCompatActivity {
 
         listGolpo.setAdapter(new ArrayAdapter<String>(GolpoNameMujtaba.this, android.R.layout.simple_list_item_1, golpoName));
 
-        listGolpo.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-
-                if (position == 0){
-                    startActivity(new Intent(GolpoNameMujtaba.this, GolpoMujtaba1.class));
-                } else if (position == 1) {
-                    startActivity(new Intent(GolpoNameMujtaba.this, GolpoMujtaba2.class));
-
-                }
-            }
-        });
+//        listGolpo.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//
+//
+//                if (position == 0){
+//                    startActivity(new Intent(GolpoNameMujtaba.this, GolpoMujtaba1.class));
+//                } else if (position == 1) {
+//                    startActivity(new Intent(GolpoNameMujtaba.this, GolpoMujtaba2.class));
+//
+//                }
+//            }
+//        });
 
     }
 }
