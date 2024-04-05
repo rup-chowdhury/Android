@@ -30,7 +30,9 @@ public class GolpoListManik extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if (position == 0){
-                    startActivity(new Intent(GolpoListManik.this, GolpoManik1.class));
+                    Intent ca = new Intent(getApplicationContext(), ReadStory.class);
+                    ca.putExtra("manik", "mone");
+                    startActivity(ca);
                 }
             }
         });
