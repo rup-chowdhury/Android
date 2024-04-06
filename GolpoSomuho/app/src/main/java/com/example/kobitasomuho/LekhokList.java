@@ -27,27 +27,6 @@ public class LekhokList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lekhok_list);
 
-        //Try for the large text
-
-        private String getLargeString() {
-            StringBuilder largeString = new StringBuilder();
-            BufferedReader reader;
-            try {
-                reader = new BufferedReader(new InputStreamReader(getAssets().open("large_string.txt")));
-                String str;
-                while ((str = reader.readLine()) != null) {
-                    largeString.append(str);
-                }
-                reader.close();
-                return largeString.toString();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            return null;
-        }
-
-
-
 
         listLekhok = findViewById(R.id.lst_lekhok);
 
