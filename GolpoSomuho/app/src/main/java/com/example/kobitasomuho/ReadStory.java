@@ -3,6 +3,7 @@ package com.example.kobitasomuho;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
 import java.io.BufferedReader;
@@ -30,10 +31,28 @@ public class ReadStory extends AppCompatActivity {
 
            if (story.equals("mone")){
                storyName.setText(R.string.golponamemanik1);
-               story_.setText(R.string.golpomanik1);
+
+               String part1 = getResources().getString(R.string.golpomanik1_1);
+               String part2 = getResources().getString(R.string.golpomanik1_2);
+               String part3 = getResources().getString(R.string.golpomanik1_3);
+
+
+               StringBuilder fullStory = new StringBuilder(part1);
+               fullStory.append(part2);
+               fullStory.append(part3);
+
+               story_.setText(fullStory.toString());
            } else if (story.equals("mtwo")) {
                storyName.setText(R.string.golponamemanik2);
                story_.setText(R.string.golpomanik2);
+           } else if (story.equals("muj1")) {
+               storyName.setText(R.string.golponamemujtaba1);
+               story_.setText(R.string.golpo1);
+           } else if (story.equals("mujtwo")) {
+               storyName.setText(R.string.golponamemujtaba2);
+               story_.setText(R.string.golpo2);
+               Log.e("RUP", "Rosh");
+
            }
         }
     }
