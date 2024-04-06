@@ -41,6 +41,8 @@ public class LekhokList extends AppCompatActivity {
                     startActivity(new Intent(LekhokList.this, GolpoNameMujtaba.class));
                 } else if (position == 1) {
                     startActivity(new Intent(LekhokList.this, GolpoListManik.class));
+                } else if (position == 2) {
+                    startActivity(new Intent(LekhokList.this, GolpoListSatyajit.class));
                 }
             }
         });
