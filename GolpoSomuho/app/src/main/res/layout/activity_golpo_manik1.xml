@@ -4,8 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".GolpoManik1">
+    android:layout_height="match_parent">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -22,36 +21,9 @@
                 android:justificationMode="inter_word"
                 android:paddingHorizontal="10dp"
                 android:paddingTop="15dp"
-                android:text="@string/golpomanik1_1"
+                android:text="@string/golpomanik1"
                 android:textSize="25sp"
                 tools:ignore="UnusedAttribute" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:justificationMode="inter_word"
-                android:paddingHorizontal="10dp"
-                android:text="@string/golpomanik1_2"
-                android:textSize="25sp"
-                tools:ignore="UnusedAttribute" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:justificationMode="inter_word"
-                android:paddingHorizontal="10dp"
-                android:text="@string/golpomanik1_3"
-                android:textSize="25sp"
-                tools:ignore="UnusedAttribute" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="10dp"
-                android:text="@string/golpomanik1_4"
-                android:textSize="25sp"
-                android:justificationMode="inter_word"
-                />
 
         </LinearLayout>
 

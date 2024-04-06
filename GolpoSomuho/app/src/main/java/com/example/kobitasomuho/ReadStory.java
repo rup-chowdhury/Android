@@ -26,7 +26,7 @@ public class ReadStory extends AppCompatActivity {
 
            if (story.equals("mone")){
                storyName.setText(R.string.golponamemanik1);
-               story_.setText(R.string.golpomanik1_1 + R.string.golpomanik1_2 + R.string.golpomanik1_3 + R.string.golpomanik1_4);
+               story_.setText(R.string.golpomanik1);
            } else if (story.equals("mtwo")) {
                storyName.setText(R.string.golponamemanik2);
                story_.setText(R.string.golpomanik2);
