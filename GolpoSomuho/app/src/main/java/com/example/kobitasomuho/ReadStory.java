@@ -52,6 +52,12 @@ public class ReadStory extends AppCompatActivity {
                story_.setText(R.string.golpo2);
                Log.e("RUP", "Rosh");
 
+           } else if (story.equals("satya1")) {
+               storyName.setText(R.string.golponamesatyajit1);
+               story_.setText(R.string.golposatyajit1);
+           } else if (story.equals("satya2")){
+               storyName.setText(R.string.golponamesatyajit2);
+               story_.setText(R.string.golposatyajit2);
            }
         }
     }

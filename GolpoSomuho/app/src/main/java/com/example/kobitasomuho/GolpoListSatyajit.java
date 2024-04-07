@@ -2,7 +2,11 @@ package com.example.kobitasomuho;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 public class GolpoListSatyajit extends AppCompatActivity {
@@ -17,6 +21,23 @@ public class GolpoListSatyajit extends AppCompatActivity {
 
         lstGolpo = findViewById(R.id.lst_satyajit);
 
-        golpoList = getResources().getStringArray(R.string.golponamesatyajit1);
+        golpoList = getResources().getStringArray(R.array.golponamesatyajit);
+
+        lstGolpo.setAdapter(new ArrayAdapter<String>(GolpoListSatyajit.this, android.R.layout.simple_list_item_1, golpoList));
+
+
+        lstGolpo.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if(position == 0){
+                    Intent ca = new Intent(getApplicationContext(), ReadStory.class);
+                    ca.putExtra("manik", "satya1");
+                    startActivity(ca);
+                } else if (position == 1) {
+                    Intent ca = new Intent(getApplicationContext(), ReadStory.class);
+                    ca.putExtra("manik","satya2");
+                }
+            }
+        });
     }
 }
