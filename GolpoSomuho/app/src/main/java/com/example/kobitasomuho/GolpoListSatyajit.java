@@ -36,6 +36,7 @@ public class GolpoListSatyajit extends AppCompatActivity {
                 } else if (position == 1) {
                     Intent ca = new Intent(getApplicationContext(), ReadStory.class);
                     ca.putExtra("manik","satya2");
+                    startActivity(ca);
                 }
             }
         });
