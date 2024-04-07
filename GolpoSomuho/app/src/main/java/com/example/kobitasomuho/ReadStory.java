@@ -37,11 +37,10 @@ public class ReadStory extends AppCompatActivity {
                String part3 = getResources().getString(R.string.golpomanik1_3);
 
 
-               StringBuilder fullStory = new StringBuilder(part1);
-               fullStory.append(part2);
-               fullStory.append(part3);
+               String fullStory = part1 + part2 +
+                       part3;
 
-               story_.setText(fullStory.toString());
+               story_.setText(fullStory);
            } else if (story.equals("mtwo")) {
                storyName.setText(R.string.golponamemanik2);
                story_.setText(R.string.golpomanik2);
