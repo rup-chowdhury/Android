@@ -5,8 +5,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/edt_url"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="#D3D3D3"
+            android:paddingLeft="10dp"
+            android:hint="Enter website or Search"/>
+
+        <Button
+            android:id="@+id/btn_go"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            app:cornerRadius="10dp"
+            android:text="Go"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"
+            android:backgroundTint="#80000000"/>
+
+    </LinearLayout>
     <WebView
         android:id="@+id/web_browser"
         android:layout_width="match_parent"
