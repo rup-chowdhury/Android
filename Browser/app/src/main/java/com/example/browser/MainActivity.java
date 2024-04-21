@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
                 if(url.isEmpty()){
                     Toast.makeText(MainActivity.this, "Please write on the URL bar", Toast.LENGTH_SHORT).show();
                 }else {
+                    String regularExpression = "^((http?|https?|ftp|smtp):\\/\\/)?(www.)?[a-z0-9]+\\.[a-z]+(\\/[a-zA-Z0-9#]+\\/?)*$";
                     viewBrowser.loadUrl(url);
                 }
             }
