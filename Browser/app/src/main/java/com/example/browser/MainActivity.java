@@ -10,6 +10,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class MainActivity extends AppCompatActivity {
 
     WebView viewBrowser;
@@ -41,7 +44,16 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Please write on the URL bar", Toast.LENGTH_SHORT).show();
                 }else {
                     String regularExpression = "^((http?|https?|ftp|smtp):\\/\\/)?(www.)?[a-z0-9]+\\.[a-z]+(\\/[a-zA-Z0-9#]+\\/?)*$";
-                    viewBrowser.loadUrl(url);
+                    Pattern pattern = Pattern.compile(regularExpression);
+                    Matcher matcher = pattern.matcher(url);
+
+                    if (matcher.matches()){
+                        viewBrowser.loadUrl(url);
+                    }else {
+                        viewBrowser.loadUrl("https://www.google.com/search?q=" +url);
+                    }
+
+
                 }
             }
         });
