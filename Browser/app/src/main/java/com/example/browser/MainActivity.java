@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         btnGo = findViewById(R.id.btn_go);
 
         viewBrowser = findViewById(R.id.web_browser);
-        viewBrowser.loadUrl("https://www.youtube.com/");
+//        viewBrowser.loadUrl("https://www.youtube.com/");
         viewBrowser.getSettings().setJavaScriptEnabled(true);
         viewBrowser.setWebViewClient(new WebViewClient());
 
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
                     Matcher matcher = pattern.matcher(url);
 
                     if (matcher.matches()){
-                        viewBrowser.loadUrl(url);
+                        viewBrowser.loadUrl("https://"+url);
                     }else {
                         viewBrowser.loadUrl("https://www.google.com/search?q=" +url);
                     }
