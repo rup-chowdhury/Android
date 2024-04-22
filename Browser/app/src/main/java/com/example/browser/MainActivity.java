@@ -58,4 +58,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public void onBackPressed() {
+        int i = 1;
+
+        if (viewBrowser.canGoBack()){
+            viewBrowser.goBack();
+        }else {
+            i++;
+
+            if (i>2){
+                edtURL.setText(" ");
+                super.onBackPressed();
+            }
+        }
+    }
 }
