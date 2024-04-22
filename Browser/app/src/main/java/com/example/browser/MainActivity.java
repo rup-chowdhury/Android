@@ -28,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
 
     LinearLayout layout;
 
+    Button yes, no;
+
 
 
     @Override
@@ -42,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
         edtURL = findViewById(R.id.edt_url);
 
         btnGo = findViewById(R.id.btn_go);
+
+
 
         viewBrowser = findViewById(R.id.web_browser);
 //        viewBrowser.loadUrl("https://www.youtube.com/");
@@ -95,6 +99,8 @@ public class MainActivity extends AppCompatActivity {
         LayoutInflater inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
         View popUpView = inflater.inflate(R.layout.exit_popup, null);
 
+
+
         int width = ViewGroup.LayoutParams.MATCH_PARENT;
 
         int height = ViewGroup.LayoutParams.WRAP_CONTENT;
@@ -108,6 +114,23 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 popupWindow.showAtLocation(layout, Gravity.CENTER, 0, 0);
+            }
+        });
+
+        yes = popUpView.findViewById(R.id.btn_exit_yes);
+        no = popUpView.findViewById(R.id.btn_exit_no);
+
+        yes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+        no.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                popupWindow.dismiss();
             }
         });
     }
