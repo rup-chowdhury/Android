@@ -3,11 +3,16 @@ package com.example.browser;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.Toast;
 
 import java.util.regex.Matcher;
@@ -21,10 +26,18 @@ public class MainActivity extends AppCompatActivity {
 
     Button btnGo;
 
+    LinearLayout layout;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        layout = findViewById(R.id.layout_main);
+
+
 
         edtURL = findViewById(R.id.edt_url);
 
@@ -67,11 +80,35 @@ public class MainActivity extends AppCompatActivity {
             viewBrowser.goBack();
         }else {
             i++;
+            if (i>=2){
+            edtURL.setText(" ");
+            createPopUpWindow();
 
-            if (i>2){
-                edtURL.setText(" ");
+            }else {
                 super.onBackPressed();
             }
+
         }
+    }
+
+    private void createPopUpWindow(){
+        LayoutInflater inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
+        View popUpView = inflater.inflate(R.layout.exit_popup, null);
+
+        int width = ViewGroup.LayoutParams.MATCH_PARENT;
+
+        int height = ViewGroup.LayoutParams.WRAP_CONTENT;
+
+        boolean focusable = true;
+
+        PopupWindow popupWindow = new PopupWindow(popUpView, width, height, focusable);
+
+
+        layout.post(new Runnable() {
+            @Override
+            public void run() {
+                popupWindow.showAtLocation(layout, Gravity.CENTER, 0, 0);
+            }
+        });
     }
 }
