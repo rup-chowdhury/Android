@@ -13,7 +13,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE contact(id INTEGER PRIMARY KEY, name TEXT, number TEXT, email TEXT)");
+        db.execSQL("CREATE TABLE IF NOT EXISTS contact(id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, number TEXT, email TEXT)");
     }
 
     @Override
