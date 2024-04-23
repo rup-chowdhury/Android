@@ -1,9 +1,23 @@
 package com.example.contactswithdatabase;
 
-public class ContactTable {
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
 
-    private void insertContact(){
+public class ContactTable extends DBHelper{
 
+    public ContactTable(Context context) {
+        super(context);
+    }
+
+    public void insertContact(String name, String email, String phone){
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put(COL_CONTACT_NAME, name);
+        cv.put(COL_CONTACT_EMAIL, email);
+        cv.put(COL_CONTACT_NUMBER, phone);
+        db.insert(TAB_CONTACT, null, cv);
+        db.close();
     }
 
     private void readContact(){
