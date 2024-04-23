@@ -15,6 +15,6 @@ public class MainActivity extends AppCompatActivity {
 
         ContactTable ct = new ContactTable(MainActivity.this);
 
-        ct.insertContact("RUP", "rupbd1@gmail.com", "01915817061");
+        ct.insertContact("Aysha", "ayshakasas@gmail.com", "01631006372");
     }
 }
