@@ -21,7 +21,8 @@
         android:background="@drawable/rounded_corner"
         android:hint="Name"
         android:paddingLeft="10dp"
-        android:textColorHint="#6AFFFFFF" />
+        android:textColorHint="#6AFFFFFF"
+        android:textColor="@color/white"/>
 
     <EditText
         android:id="@+id/edt_email"
@@ -33,7 +34,8 @@
         android:hint="E-mail"
         android:textColorHint="#6AFFFFFF"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"/>
 
     <EditText
         android:id="@+id/edt_phone"
@@ -45,7 +47,8 @@
         android:hint="Number"
         android:textColorHint="#6AFFFFFF"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"/>
 
     <Button
         android:id="@+id/btn_save"
