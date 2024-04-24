@@ -20,8 +20,11 @@ public class ContactTable extends DBHelper{
         db.close();
     }
 
-    private void getAllContacts(){
+    private ContactModel getAllContacts(){
 
+        ContactModel cm = new ContactModel();
+
+        return cm;
     }
 
     private void updateContact(){
