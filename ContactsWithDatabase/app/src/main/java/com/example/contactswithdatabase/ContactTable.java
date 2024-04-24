@@ -20,7 +20,7 @@ public class ContactTable extends DBHelper{
         db.close();
     }
 
-    private void readContact(){
+    private void getAllContacts(){
 
     }
 
