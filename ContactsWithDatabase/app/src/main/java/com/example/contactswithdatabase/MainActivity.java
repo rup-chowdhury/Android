@@ -49,8 +49,5 @@ public class MainActivity extends AppCompatActivity {
 
 //        DBHelper myDBHelper = new DBHelper(MainActivity.this);
 
-        ContactTable ct = new ContactTable(MainActivity.this);
-
-        ct.insertContact("Aysha", "ayshakasas@gmail.com", "01631006372");
     }
 }
