@@ -4,6 +4,8 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
+import java.util.ArrayList;
+
 public class ContactTable extends DBHelper{
 
     public ContactTable(Context context) {
@@ -20,11 +22,15 @@ public class ContactTable extends DBHelper{
         db.close();
     }
 
-    private ContactModel getAllContacts(){
+    private ArrayList<ContactModel> getAllContacts(){
 
-        ContactModel cm = new ContactModel();
+        ArrayList<ContactModel> allContacts = new ArrayList<>();
 
-        return cm;
+        SQLiteDatabase db = getReadableDatabase();
+
+        db.query();
+        db.close();
+        return allContacts;
     }
 
     private void updateContact(){
