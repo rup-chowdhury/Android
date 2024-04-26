@@ -16,4 +16,10 @@ public class ContactModel {
         this.email = email;
         this.phoneNumber = phoneNumber;
     }
+
+    public ContactModel(String name, String email, String phoneNumber) {
+        this.name = name;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+    }
 }

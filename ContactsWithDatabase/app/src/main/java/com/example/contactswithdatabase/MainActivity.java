@@ -8,12 +8,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     EditText edtName, edtEmail, edtPhone;
 
     Button btnSave;
 
+    ArrayList<ContactModel> allContacts = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
 
         btnSave = findViewById(R.id.btn_save);
 
+        ContactTable ct = new ContactTable(MainActivity.this);
+        allContacts = ct.getAllContacts();
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -38,8 +43,8 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Information Missing!", Toast.LENGTH_SHORT).show();
                 } else {
                     ContactTable ct = new ContactTable(MainActivity.this);
-
-                    ct.insertContact(name, email, phone);
+                    ContactModel cm = new ContactModel(name, email, phone);
+                    ct.insertContact(cm);
 
                     Toast.makeText(MainActivity.this, "Contact Added", Toast.LENGTH_SHORT).show();
                 }
