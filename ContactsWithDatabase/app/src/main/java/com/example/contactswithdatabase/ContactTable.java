@@ -28,7 +28,7 @@ public class ContactTable extends DBHelper{
 
         SQLiteDatabase db = getReadableDatabase();
 
-        db.query();
+        db.query(TAB_CONTACT, );
         db.close();
         return allContacts;
     }
