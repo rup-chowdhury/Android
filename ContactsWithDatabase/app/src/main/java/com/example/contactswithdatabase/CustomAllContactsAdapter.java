@@ -1,9 +1,12 @@
 package com.example.contactswithdatabase;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -20,7 +23,7 @@ public class CustomAllContactsAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return 0;
+        return allContacts.size();
     }
 
     @Override
@@ -35,6 +38,18 @@ public class CustomAllContactsAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        return null;
+        if (convertView == null){
+            convertView = LayoutInflater.from(mContext).inflate(R.layout.item_all_contact_list, parent, false);
+        }
+        TextView txtName = convertView.findViewById(R.id.txt_name);
+
+        TextView txtEmail = convertView.findViewById(R.id.txt_email);
+
+        TextView txtNumber = convertView.findViewById(R.id.txt_number);
+
+        TextView txtID = convertView.findViewById(R.id.txt_id);
+
+
+        return convertView;
     }
 }
