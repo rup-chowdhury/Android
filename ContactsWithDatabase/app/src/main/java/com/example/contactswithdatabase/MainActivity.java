@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
 
         ContactTable ct = new ContactTable(MainActivity.this);
         allContacts = ct.getAllContacts();
+
+        CustomAllContactsAdapter ca = new CustomAllContactsAdapter(MainActivity.this, allContacts);
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
