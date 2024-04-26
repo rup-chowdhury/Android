@@ -2,6 +2,7 @@ package com.example.contactswithdatabase;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
@@ -28,7 +29,8 @@ public class ContactTable extends DBHelper{
 
         SQLiteDatabase db = getReadableDatabase();
 
-        db.query(TAB_CONTACT, );
+        Cursor c = db.query(TAB_CONTACT, null, null, null, null, null, null);
+
         db.close();
         return allContacts;
     }
