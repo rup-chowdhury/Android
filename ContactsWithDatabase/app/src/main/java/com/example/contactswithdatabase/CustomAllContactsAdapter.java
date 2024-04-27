@@ -47,7 +47,10 @@ public class CustomAllContactsAdapter extends BaseAdapter {
 
         TextView txtNumber = convertView.findViewById(R.id.txt_number);
 
-        TextView txtID = convertView.findViewById(R.id.txt_id);
+
+        txtName.setText(allContacts.get(position).name);
+        txtEmail.setText(allContacts.get(position).email);
+        txtNumber.setText(allContacts.get(position).phoneNumber);
 
 
         return convertView;
