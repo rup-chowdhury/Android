@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                     ContactTable ct = new ContactTable(MainActivity.this);
 
                     ContactModel cm = new ContactModel(name, email, phone);  //Creating a constructor with 3 variables
-                                                                             //either it will want a id at first
+                                                                             //either it will want an ID at first
                     ct.insertContact(cm);
 
                     Toast.makeText(MainActivity.this, "Contact Added", Toast.LENGTH_SHORT).show();
