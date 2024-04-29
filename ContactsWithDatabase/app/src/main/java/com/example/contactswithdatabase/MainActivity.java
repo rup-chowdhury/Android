@@ -45,7 +45,9 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Information Missing!", Toast.LENGTH_SHORT).show();
                 } else {
                     ContactTable ct = new ContactTable(MainActivity.this);
-                    ContactModel cm = new ContactModel(name, email, phone);
+
+                    ContactModel cm = new ContactModel(name, email, phone);  //Creating a constructor with 3 variables
+                                                                             //either it will want a id at first
                     ct.insertContact(cm);
 
                     Toast.makeText(MainActivity.this, "Contact Added", Toast.LENGTH_SHORT).show();

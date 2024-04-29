@@ -39,6 +39,7 @@ public class ContactTable extends DBHelper{
             @SuppressLint("Range") String phone = c.getString(c.getColumnIndex(COL_CONTACT_NUMBER));
             ContactModel cm = new ContactModel(id, name, email, phone);
             allContacts.add(cm);
+
         }
         db.close();
         return allContacts;
