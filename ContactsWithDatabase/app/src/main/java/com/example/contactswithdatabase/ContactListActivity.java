@@ -24,8 +24,9 @@ public class ContactListActivity extends AppCompatActivity {
         ContactTable ct = new ContactTable(ContactListActivity.this);
 
 
-
         allContacts = ct.getAllContacts();
 
+
+        lstContacts.setAdapter(new CustomAllContactsAdapter(ContactListActivity.this, allContacts));
     }
 }
