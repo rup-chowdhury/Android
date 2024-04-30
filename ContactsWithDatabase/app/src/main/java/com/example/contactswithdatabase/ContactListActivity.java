@@ -5,9 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 
+import java.util.ArrayList;
+
 public class ContactListActivity extends AppCompatActivity {
 
     ListView lstContacts;
+
+    ArrayList<ContactModel> allContacts;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +20,12 @@ public class ContactListActivity extends AppCompatActivity {
 
         lstContacts = findViewById(R.id.lst_contacts);
 
-        
+
+        ContactTable ct = new ContactTable(ContactListActivity.this);
+
+
+
+        allContacts = ct.getAllContacts();
+
     }
 }

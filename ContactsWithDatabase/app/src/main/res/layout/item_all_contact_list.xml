@@ -14,9 +14,6 @@
         android:text="Contact Name"
         android:textSize="40sp"
         />
-
-
-
         <TextView
             android:id="@+id/txt_number"
             android:layout_width="wrap_content"
@@ -24,7 +21,6 @@
             android:text="Contact Number"
             android:textSize="30dp"
             />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="25dp"
