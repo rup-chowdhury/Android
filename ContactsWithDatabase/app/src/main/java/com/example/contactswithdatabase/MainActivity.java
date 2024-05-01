@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     EditText edtName, edtEmail, edtPhone;
 
-    Button btnSave;
+    Button btnSave, btnAllContacts;
 
     ArrayList<ContactModel> allContacts = new ArrayList<>();
     @Override
@@ -28,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
         edtPhone = findViewById(R.id.edt_phone);
 
         btnSave = findViewById(R.id.btn_save);
+
+        btnAllContacts = findViewById(R.id.btn_all_contact);
 
         ContactTable ct = new ContactTable(MainActivity.this);
         allContacts = ct.getAllContacts();
@@ -55,12 +57,17 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Contact Added", Toast.LENGTH_SHORT).show();
 
 
-                    startActivity(new Intent(MainActivity.this, ContactListActivity.class));
+
                 }
             }
         });
 
-
+        btnAllContacts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ContactListActivity.class));
+            }
+        });
 //        DBHelper myDBHelper = new DBHelper(MainActivity.this);
 
     }
