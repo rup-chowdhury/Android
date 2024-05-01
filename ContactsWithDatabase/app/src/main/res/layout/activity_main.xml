@@ -59,15 +59,22 @@
         android:textColor="@color/white"/>
 
     <Button
+        style="@style/Widget.Material3.Button.ElevatedButton"
         android:id="@+id/btn_save"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.25"
+        android:layout_weight="0.37"
         android:layout_marginHorizontal="90dp"
-        app:cornerRadius="5dp"
-        android:backgroundTint="#48156B8C"
+        android:paddingLeft="40dp"
+        android:paddingRight="60dp"
+        app:cornerRadius="10dp"
+        android:drawableLeft="@drawable/icon_save"
+        android:backgroundTint="#1C5A75"
         android:text="Save"
-        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:textSize="21sp"
+        android:fontFamily="@font/roboto_light"
+        android:textStyle="bold"
         />
 
     </LinearLayout>
@@ -79,13 +86,15 @@
 
         <Button
             android:id="@+id/btn_all_contact"
+            style="@style/Widget.Material3.Button.ElevatedButton"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_gravity="top"
             android:layout_marginHorizontal="50dp"
-            android:backgroundTint="#1F6684"
+            android:backgroundTint="#1C5A75"
             android:fontFamily="@font/roboto_light"
             android:text="Show all contacts"
+            android:textColor="@color/white"
             android:textSize="20sp"
             app:cornerRadius="5dp" />
 
