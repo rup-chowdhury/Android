@@ -45,8 +45,17 @@ public class ContactTable extends DBHelper{
         return allContacts;
     }
 
-    private void updateContact(){
+    private void updateContact(ContactModel cm){
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues cv = new ContentValues();
 
+        cv.put(COL_CONTACT_NAME, cm.name);
+        cv.put(COL_CONTACT_EMAIL, cm.email);
+        cv.put(COL_CONTACT_NUMBER, cm.phoneNumber);
+
+        db.update(TAB_CONTACT, cv, COL_CONTACT_ID+" = ?" , new String[]{cm.id+""});
+
+        db.close();
     }
 
     private void deleteContact(){
