@@ -37,7 +37,10 @@ public class ContactListActivity extends AppCompatActivity {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
 
-                Intent i = new Intent(Con)
+                Intent i = new Intent(ContactListActivity.this, MainActivity.class);
+                i.putExtra("id", allContacts.get(position).id);
+
+                startActivity(i);
 
                 return false;
             }
