@@ -1,6 +1,8 @@
 package com.example.contactswithdatabase;
 
-public class ContactModel {
+import java.io.Serializable;
+
+public class ContactModel implements Serializable {
 
     int id;
 
