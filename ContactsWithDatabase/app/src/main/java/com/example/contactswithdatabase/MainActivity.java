@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        getIntent().getIntExtra("id", -1);
+        int contactID = getIntent().getIntExtra("id", -1);
 
         edtName = findViewById(R.id.edt_name);
         edtEmail = findViewById(R.id.edt_email);
