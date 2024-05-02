@@ -25,6 +25,11 @@ public class MainActivity extends AppCompatActivity {
 
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.TIRAMISU) {
             ContactModel cm = getIntent().getSerializableExtra("id", ContactModel.class);
+
+            edtName.setText(cm.name);
+            edtEmail.setText(cm.email);
+            edtPhone.setText(cm.phoneNumber);
+
         }
 
         edtName = findViewById(R.id.edt_name);
