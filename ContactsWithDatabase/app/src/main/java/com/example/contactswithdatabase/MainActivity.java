@@ -23,6 +23,24 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
+        edtName = findViewById(R.id.edt_name);
+        edtEmail = findViewById(R.id.edt_email);
+        edtPhone = findViewById(R.id.edt_phone);
+
+        btnSave = findViewById(R.id.btn_save);
+
+
+
+        btnAllContacts = findViewById(R.id.btn_all_contact);
+
+        ContactTable ct = new ContactTable(MainActivity.this);
+        allContacts = ct.getAllContacts();
+
+        CustomAllContactsAdapter ca = new CustomAllContactsAdapter(MainActivity.this, allContacts);
+
+
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.TIRAMISU) {
             ContactModel cm = getIntent().getSerializableExtra("id", ContactModel.class);
 
@@ -33,19 +51,6 @@ public class MainActivity extends AppCompatActivity {
             }
 
         }
-
-        edtName = findViewById(R.id.edt_name);
-        edtEmail = findViewById(R.id.edt_email);
-        edtPhone = findViewById(R.id.edt_phone);
-
-        btnSave = findViewById(R.id.btn_save);
-
-        btnAllContacts = findViewById(R.id.btn_all_contact);
-
-        ContactTable ct = new ContactTable(MainActivity.this);
-        allContacts = ct.getAllContacts();
-
-        CustomAllContactsAdapter ca = new CustomAllContactsAdapter(MainActivity.this, allContacts);
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -67,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
                     Toast.makeText(MainActivity.this, "Contact Added", Toast.LENGTH_SHORT).show();
 
+                    startActivity(new Intent(MainActivity.this, ContactListActivity.class));
 
 
                 }
