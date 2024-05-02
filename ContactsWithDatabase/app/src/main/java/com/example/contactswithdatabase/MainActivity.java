@@ -23,7 +23,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        int contactID = getIntent().getIntExtra("id", -1);
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.TIRAMISU) {
+            ContactModel cm = getIntent().getSerializableExtra("id", ContactModel.class);
+        }
 
         edtName = findViewById(R.id.edt_name);
         edtEmail = findViewById(R.id.edt_email);
