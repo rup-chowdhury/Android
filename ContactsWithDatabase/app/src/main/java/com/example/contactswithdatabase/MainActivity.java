@@ -40,17 +40,18 @@ public class MainActivity extends AppCompatActivity {
 
         CustomAllContactsAdapter ca = new CustomAllContactsAdapter(MainActivity.this, allContacts);
 
+        int id = getIntent().getIntExtra("id", -7);
 
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.TIRAMISU) {
-            ContactModel cm = getIntent().getSerializableExtra("id", ContactModel.class);
-
-            if (cm != null){
-                edtName.setText(cm.name);
-                edtEmail.setText(cm.email);
-                edtPhone.setText(cm.phoneNumber);
-            }
-
-        }
+//        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.TIRAMISU) {
+//            ContactModel cm = getIntent().getSerializableExtra("id", ContactModel.class);
+//
+//            if (cm != null){
+//                edtName.setText(cm.name);
+//                edtEmail.setText(cm.email);
+//                edtPhone.setText(cm.phoneNumber);
+//            }
+//
+//        }
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
