@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
 
     ContactTable ct;
 
+    boolean isEdit = false;
+
     ArrayList<ContactModel> allContacts = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +47,9 @@ public class MainActivity extends AppCompatActivity {
         int id = getIntent().getIntExtra("id", -7);
 
         if (id != -7){
+
+            isEdit = true;
+
             ContactModel cm= ct.getContact(id);
             edtName.setText(cm.name);
             edtEmail.setText(cm.email);
@@ -78,7 +83,11 @@ public class MainActivity extends AppCompatActivity {
                     ContactModel cm = new ContactModel(name, email, phone);  //Creating a constructor with 3 variables
                                                                              //either it will want an ID at first
 
-                    ct.insertContact(cm);
+                    if (isEdit){
+                        ct.updateContact(cm);
+                    }else {
+                        ct.insertContact(cm);
+                    }
 
                     Toast.makeText(MainActivity.this, "Contact Added", Toast.LENGTH_SHORT).show();
 
