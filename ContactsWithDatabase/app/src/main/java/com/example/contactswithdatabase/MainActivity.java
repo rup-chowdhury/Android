@@ -17,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
 
     Button btnSave, btnAllContacts;
 
+    ContactTable ct;
+
     ArrayList<ContactModel> allContacts = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnAllContacts = findViewById(R.id.btn_all_contact);
 
-        ContactTable ct = new ContactTable(MainActivity.this);
+        ct = new ContactTable(MainActivity.this);
         allContacts = ct.getAllContacts();
 
         CustomAllContactsAdapter ca = new CustomAllContactsAdapter(MainActivity.this, allContacts);
@@ -64,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
                 if(name.isEmpty() || email.isEmpty() || phone.isEmpty()){
                     Toast.makeText(MainActivity.this, "Information Missing!", Toast.LENGTH_SHORT).show();
                 } else {
-                    ContactTable ct = new ContactTable(MainActivity.this);
+                    ct = new ContactTable(MainActivity.this);
 
                     ContactModel cm = new ContactModel(name, email, phone);  //Creating a constructor with 3 variables
                                                                              //either it will want an ID at first
