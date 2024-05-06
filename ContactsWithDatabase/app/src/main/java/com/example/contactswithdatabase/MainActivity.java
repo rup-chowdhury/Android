@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
             btnSave.setText("Update");
 
             btnSave.setTextSize(20);
-            btnSave.setPadding(90, 0, 40, 0);
+            btnSave.setPadding(90, 20, 70, 20);
 
 
             ContactModel cm= ct.getContact(id);
