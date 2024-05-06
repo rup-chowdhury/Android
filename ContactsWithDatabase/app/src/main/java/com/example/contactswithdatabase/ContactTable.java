@@ -68,7 +68,7 @@ public class ContactTable extends DBHelper{
         return cm;
     }
 
-    private void updateContact(ContactModel cm){
+    public void updateContact(ContactModel cm){
         SQLiteDatabase db = getWritableDatabase();
         ContentValues cv = new ContentValues();
 
