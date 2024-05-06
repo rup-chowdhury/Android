@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     EditText edtName, edtEmail, edtPhone;
 
-    Button btnSave, btnAllContacts;
+    Button btnSave, btnAllContacts, btnClear;
 
     ContactTable ct;
 
@@ -123,12 +123,25 @@ public class MainActivity extends AppCompatActivity {
         });
 //        DBHelper myDBHelper = new DBHelper(MainActivity.this);
 
+
+        btnClear = findViewById(R.id.btn_clear);
+        btnClear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                edtName.setText("");
+                edtEmail.setText("");
+                edtPhone.setText("");
+            }
+        });
     }
+
+
 
     @Override
     protected void onPause() {
         super.onPause();
 
+        if(!isEdit) {
         // Creating a shared pref object with a file name "MySharedPref" in private mode
         SharedPreferences sharedPreferences = getSharedPreferences("MySharedPref", MODE_PRIVATE);
         SharedPreferences.Editor myEdit = sharedPreferences.edit();
@@ -138,12 +151,14 @@ public class MainActivity extends AppCompatActivity {
         myEdit.putString("email", edtEmail.getText().toString());
         myEdit.putString("number", edtPhone.getText().toString());
         myEdit.apply();
+        }
     }
 
     @Override
     protected void onResume() {
         super.onResume();
 
+        if (!isEdit){
         SharedPreferences sh = getSharedPreferences("MySharedPref", MODE_PRIVATE);
         String s1 = sh.getString("name", "");
         String s2 = sh.getString("email", "");
@@ -153,5 +168,7 @@ public class MainActivity extends AppCompatActivity {
         edtName.setText(s1);
         edtEmail.setText(s2);
         edtPhone.setText(s3);
+
+        }
     }
 }

@@ -51,7 +51,7 @@ public class ContactTable extends DBHelper{
 
         ContactModel cm = new ContactModel();
 
-        Cursor c = db.query(TAB_CONTACT, null, COL_CONTACT_ID + " = ? ", new String[]{id+""}, null, null, null);
+        Cursor c = db.query(TAB_CONTACT, null, COL_CONTACT_ID + " = ? ", new String[]{String.valueOf(id)}, null, null, null);
 
         while (c.moveToNext()){
             @SuppressLint("Range") int ids = c.getInt(c.getColumnIndex(COL_CONTACT_ID));
@@ -76,15 +76,15 @@ public class ContactTable extends DBHelper{
         cv.put(COL_CONTACT_EMAIL, cm.email);
         cv.put(COL_CONTACT_NUMBER, cm.phoneNumber);
 
-        db.update(TAB_CONTACT, cv, COL_CONTACT_ID+" = ?" , new String[]{cm.id+""});
+        db.update(TAB_CONTACT, cv, COL_CONTACT_ID+" = ?" , new String[]{String.valueOf(cm.id)});
 
         db.close();
     }
 
-    private void deleteContact(int id){
+    public void deleteContact(int id){
         SQLiteDatabase db = getWritableDatabase();
 
-        db.delete(TAB_CONTACT, COL_CONTACT_ID+" = ?", new String[]{id+""});
+        db.delete(TAB_CONTACT, COL_CONTACT_ID+" = ?", new String[]{String.valueOf(id)});
 
         db.close();
 
