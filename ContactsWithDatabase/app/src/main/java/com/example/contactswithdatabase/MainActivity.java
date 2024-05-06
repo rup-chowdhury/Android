@@ -44,6 +44,13 @@ public class MainActivity extends AppCompatActivity {
 
         int id = getIntent().getIntExtra("id", -7);
 
+        if (id != -7){
+            ContactModel cm= ct.getContact(id);
+            edtName.setText(cm.name);
+            edtEmail.setText(cm.email);
+            edtPhone.setText(cm.phoneNumber);
+        }
+
 //        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.TIRAMISU) {
 //            ContactModel cm = getIntent().getSerializableExtra("id", ContactModel.class);
 //
