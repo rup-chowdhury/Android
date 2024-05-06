@@ -58,7 +58,7 @@ public class ContactTable extends DBHelper{
             @SuppressLint("Range") String name = c.getString(c.getColumnIndex(COL_CONTACT_NAME));
             @SuppressLint("Range") String email = c.getString(c.getColumnIndex(COL_CONTACT_EMAIL));
             @SuppressLint("Range") String phone = c.getString(c.getColumnIndex(COL_CONTACT_NUMBER));
-            cm = new ContactModel(id, name, email, phone);
+            cm = new ContactModel(ids, name, email, phone);
             //allContacts.add(cm);
 
         }
@@ -81,7 +81,13 @@ public class ContactTable extends DBHelper{
         db.close();
     }
 
-    private void deleteContact(){
+    private void deleteContact(int id){
+        SQLiteDatabase db = getWritableDatabase();
+
+        db.delete(TAB_CONTACT, COL_CONTACT_ID+" = ?", new String[]{id+""});
+
+        db.close();
+
 
     }
 }
