@@ -6,6 +6,7 @@
 
 <!--       Enabling transition -->
         <item name="android:windowActivityTransitions">true</item>
+<!--        Setting up Enter and Exit Transition-->
         <item name="android:windowEnterTransition">@transition/transition_animation</item>
         <item name="android:windowExitTransition">@transition/transition_animation</item>
     </style>
