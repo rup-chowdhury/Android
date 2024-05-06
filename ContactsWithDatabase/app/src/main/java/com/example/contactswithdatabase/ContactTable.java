@@ -47,7 +47,14 @@ public class ContactTable extends DBHelper{
 
 
     public ContactModel getContact(int id){
+        SQLiteDatabase db = getReadableDatabase();
 
+        Cursor c = db.query(TAB_CONTACT, null, COL_CONTACT_ID + " = ? ", new String[]{id+""}, null, null, null);
+
+
+        db.close();
+
+        return new ContactModel();
     }
 
     private void updateContact(ContactModel cm){
