@@ -12,6 +12,9 @@ public class ContactModel implements Serializable {
 
     String phoneNumber;
 
+    public ContactModel() {
+    }
+
     public ContactModel(int id, String name, String email, String phoneNumber) {
         this.id = id;
         this.name = name;
