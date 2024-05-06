@@ -3,5 +3,11 @@
     <style name="Base.Theme.ContactsWithDatabase" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+
+        <item name="android:windowActivityTransitions">true</item>
+        <!--        Setting up Enter and Exit Transition-->
+        <item name="android:windowEnterTransition">@transition/transition_animation</item>
+        <item name="android:windowExitTransition">@transition/transition_animation</item>
+
     </style>
 </resources>
