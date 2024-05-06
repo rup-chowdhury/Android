@@ -50,6 +50,12 @@ public class MainActivity extends AppCompatActivity {
 
             isEdit = true;
 
+            btnSave.setText("Update");
+
+            btnSave.setTextSize(20);
+            btnSave.setPadding(90, 0, 40, 0);
+
+
             ContactModel cm= ct.getContact(id);
             edtName.setText(cm.name);
             edtEmail.setText(cm.email);
@@ -84,12 +90,14 @@ public class MainActivity extends AppCompatActivity {
                                                                              //either it will want an ID at first
 
                     if (isEdit){
+                        cm.id = id;
                         ct.updateContact(cm);
+                        Toast.makeText(MainActivity.this, "Contact Updated", Toast.LENGTH_SHORT).show();
                     }else {
                         ct.insertContact(cm);
+                        Toast.makeText(MainActivity.this, "Contact Added", Toast.LENGTH_SHORT).show();
                     }
 
-                    Toast.makeText(MainActivity.this, "Contact Added", Toast.LENGTH_SHORT).show();
 
                     startActivity(new Intent(MainActivity.this, ContactListActivity.class));
 
