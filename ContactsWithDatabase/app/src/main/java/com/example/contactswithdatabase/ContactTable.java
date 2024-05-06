@@ -49,12 +49,23 @@ public class ContactTable extends DBHelper{
     public ContactModel getContact(int id){
         SQLiteDatabase db = getReadableDatabase();
 
+        ContactModel cm = new ContactModel();
+
         Cursor c = db.query(TAB_CONTACT, null, COL_CONTACT_ID + " = ? ", new String[]{id+""}, null, null, null);
 
+        while (c.moveToNext()){
+            @SuppressLint("Range") int ids = c.getInt(c.getColumnIndex(COL_CONTACT_ID));
+            @SuppressLint("Range") String name = c.getString(c.getColumnIndex(COL_CONTACT_NAME));
+            @SuppressLint("Range") String email = c.getString(c.getColumnIndex(COL_CONTACT_EMAIL));
+            @SuppressLint("Range") String phone = c.getString(c.getColumnIndex(COL_CONTACT_NUMBER));
+            cm = new ContactModel(id, name, email, phone);
+            //allContacts.add(cm);
+
+        }
 
         db.close();
 
-        return new ContactModel();
+        return cm;
     }
 
     private void updateContact(ContactModel cm){
