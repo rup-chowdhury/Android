@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
+        ct = new ContactTable(MainActivity.this);
 
         edtName = findViewById(R.id.edt_name);
         edtEmail = findViewById(R.id.edt_email);
@@ -37,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
 
         btnAllContacts = findViewById(R.id.btn_all_contact);
 
-        ct = new ContactTable(MainActivity.this);
         allContacts = ct.getAllContacts();
 
         CustomAllContactsAdapter ca = new CustomAllContactsAdapter(MainActivity.this, allContacts);
