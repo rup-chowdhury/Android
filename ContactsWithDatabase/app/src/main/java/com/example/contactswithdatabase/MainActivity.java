@@ -2,7 +2,9 @@ package com.example.contactswithdatabase;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -99,7 +101,10 @@ public class MainActivity extends AppCompatActivity {
                     }
 
 
-                    startActivity(new Intent(MainActivity.this, ContactListActivity.class));
+                    Intent i = new Intent(MainActivity.this, ContactListActivity.class);
+                    Bundle b = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this).toBundle();
+
+                    startActivity(i , b);
 
 
                 }
@@ -109,10 +114,44 @@ public class MainActivity extends AppCompatActivity {
         btnAllContacts.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, ContactListActivity.class));
+                Intent i = new Intent(MainActivity.this, ContactListActivity.class);
+
+                Bundle b = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this).toBundle();
+
+                startActivity(i, b);
             }
         });
 //        DBHelper myDBHelper = new DBHelper(MainActivity.this);
 
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        // Creating a shared pref object with a file name "MySharedPref" in private mode
+        SharedPreferences sharedPreferences = getSharedPreferences("MySharedPref", MODE_PRIVATE);
+        SharedPreferences.Editor myEdit = sharedPreferences.edit();
+
+        // write all the data entered by the user in SharedPreference and apply
+        myEdit.putString("name", edtName.getText().toString());
+        myEdit.putString("email", edtEmail.getText().toString());
+        myEdit.putString("number", edtPhone.getText().toString());
+        myEdit.apply();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        SharedPreferences sh = getSharedPreferences("MySharedPref", MODE_PRIVATE);
+        String s1 = sh.getString("name", "");
+        String s2 = sh.getString("email", "");
+        String s3 = sh.getString("number", "");
+
+        // Setting the fetched data in the EditTexts
+        edtName.setText(s1);
+        edtEmail.setText(s2);
+        edtPhone.setText(s3);
     }
 }
