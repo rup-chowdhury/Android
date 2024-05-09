@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
             isEdit = true;
 
-            btnSave.setText("Update");
+            btnSave.setText("Update");     // The text of the button will change into "Update" when updating the data
 
             btnSave.setTextSize(20);
             btnSave.setPadding(90, 20, 70, 20);
