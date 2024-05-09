@@ -71,7 +71,7 @@ public class ContactListActivity extends AppCompatActivity {
 
         int width = ViewGroup.LayoutParams.MATCH_PARENT;
 
-        int height = ViewGroup.LayoutParams.MATCH_PARENT;
+        int height = ViewGroup.LayoutParams.MATCH_PARENT; // to show the popup in full screen
 
         boolean focusable = true;
 
