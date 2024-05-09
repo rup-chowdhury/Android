@@ -93,7 +93,7 @@ public class ContactListActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent i = new Intent(ContactListActivity.this, MainActivity.class);
-                i.putExtra("id", allContacts.get(position).id);
+                i.putExtra("id", allContacts.get(position).id); //forwarding to the update page
 
                 startActivity(i);
 
