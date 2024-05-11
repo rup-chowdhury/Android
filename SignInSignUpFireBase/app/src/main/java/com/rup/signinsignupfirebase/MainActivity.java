@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                userRegister();
             }
         });
 
@@ -40,5 +40,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+    }
+
+    private void userRegister() {
     }
 }

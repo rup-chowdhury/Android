@@ -30,6 +30,7 @@ public class NewUser extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(NewUser.this, MainActivity.class);
+                startActivity(i);
             }
         });
 
