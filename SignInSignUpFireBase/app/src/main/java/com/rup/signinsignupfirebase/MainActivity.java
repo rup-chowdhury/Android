@@ -43,5 +43,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void userRegister() {
+        String email = edtSignInEmail.getText().toString().trim();
+        String password = edtSignInPassword.getText().toString().trim();
+
+        if (email.isEmpty()){
+            edtSignInEmail.setError("Enter an Valid Email");
+            edtSignInEmail.requestFocus();
+        }
     }
 }
