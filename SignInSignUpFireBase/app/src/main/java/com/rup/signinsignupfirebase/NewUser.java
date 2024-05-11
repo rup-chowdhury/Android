@@ -26,6 +26,13 @@ public class NewUser extends AppCompatActivity {
         btnSignUp = findViewById(R.id.btn_sign_up);
         btnSignIn = findViewById(R.id.log_in);
 
+        btnSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                userRegister();
+            }
+        });
+
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -34,5 +41,16 @@ public class NewUser extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void userRegister() {
+        String email = edtSignUpEmail.getText().toString().trim();
+        String password = edtSignUpPassword.getText().toString().trim();
+
+        if (email.isEmpty()){
+            edtSignUpEmail.setError("Please put valid email");
+            edtSignUpEmail.requestFocus();
+            
+        }
     }
 }
