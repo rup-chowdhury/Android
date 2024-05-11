@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:paddingHorizontal="40dp"
+    android:orientation="vertical"
+    android:background="#2B2339"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.6">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="#2B2339"
+            android:fontFamily="casual"
+            android:text="Sign Up"
+            android:textColor="@color/white"
+            android:textSize="45sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginBottom="20dp"
+            android:background="#54FFFFFF"
+            android:backgroundTint="#ABA2BA"
+            android:drawableLeft="@mipmap/username_foreground"
+            android:fontFamily="@font/sarpanch"
+            android:hint="@string/usernameBox"
+            android:textColorHint="#5EFFFFFF"
+            android:textSize="22sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginBottom="20dp"
+            android:background="#54FFFFFF"
+            android:backgroundTint="#ABA2BA"
+            android:drawableLeft="@mipmap/email_foreground"
+            android:fontFamily="@font/sarpanch"
+            android:hint="@string/email_box"
+            android:textColorHint="#5EFFFFFF"
+            android:textSize="22sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="#54FFFFFF"
+            android:layout_marginBottom="20dp"
+            android:drawableLeft="@mipmap/password_foreground"
+            android:backgroundTint="#ABA2BA"
+            android:fontFamily="@font/sarpanch"
+            android:hint="@string/passwordBox"
+            android:textColorHint="#5EFFFFFF"
+            android:textSize="22sp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:text="Create Account"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:layout_weight="0.01">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Already have a account?"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="16sp"
+            >
+        </TextView>
+        <Button
+            android:id="@+id/log_in"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#2B2339"
+            android:text="Log In"
+            android:textStyle="bold"
+            android:textColor="#B81919"
+            android:gravity="left"
+            android:textSize="18sp">
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>
