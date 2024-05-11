@@ -50,7 +50,8 @@ public class NewUser extends AppCompatActivity {
         if (email.isEmpty()){
             edtSignUpEmail.setError("Please put valid email");
             edtSignUpEmail.requestFocus();
-            
+            return;
         }
+
     }
 }
