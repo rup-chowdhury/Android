@@ -10,7 +10,7 @@ public class MainActivity extends AppCompatActivity {
 
     EditText edtSignInEmail, edtSignInPassword;
 
-    Button btnSignUp;
+    Button btnSignUp, btnRegisterUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,5 +21,8 @@ public class MainActivity extends AppCompatActivity {
         edtSignInPassword = findViewById(R.id.edt_signin_password);
 
         btnSignUp = findViewById(R.id.btn_sign_in);
+        btnRegisterUser = findViewById(R.id.btn_register_user);
+
+        
     }
 }
