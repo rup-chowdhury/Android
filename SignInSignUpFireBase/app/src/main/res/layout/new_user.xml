@@ -33,35 +33,23 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
+            android:id="@+id/edt_signup_email"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_marginBottom="20dp"
             android:background="#54FFFFFF"
             android:backgroundTint="#ABA2BA"
-            android:drawableLeft="@mipmap/username_foreground"
-            android:fontFamily="@font/sarpanch"
-            android:hint="@string/usernameBox"
-            android:textColorHint="#5EFFFFFF"
-            android:textSize="22sp" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_marginBottom="20dp"
-            android:background="#54FFFFFF"
-            android:backgroundTint="#ABA2BA"
-            android:drawableLeft="@mipmap/email_foreground"
             android:fontFamily="@font/sarpanch"
             android:hint="@string/email_box"
             android:textColorHint="#5EFFFFFF"
             android:textSize="22sp" />
 
         <EditText
+            android:id="@+id/edt_signup_password"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:background="#54FFFFFF"
             android:layout_marginBottom="20dp"
-            android:drawableLeft="@mipmap/password_foreground"
             android:backgroundTint="#ABA2BA"
             android:fontFamily="@font/sarpanch"
             android:hint="@string/passwordBox"
