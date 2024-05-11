@@ -2,7 +2,9 @@ package com.rup.signinsignupfirebase;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -23,6 +25,19 @@ public class MainActivity extends AppCompatActivity {
         btnSignUp = findViewById(R.id.btn_sign_in);
         btnRegisterUser = findViewById(R.id.btn_register_user);
 
-        
+
+        btnSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        btnRegisterUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, NewUser.class);
+            }
+        });
     }
 }
