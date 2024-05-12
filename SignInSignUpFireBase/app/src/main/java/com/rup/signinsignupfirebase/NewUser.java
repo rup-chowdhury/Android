@@ -2,6 +2,7 @@ package com.rup.signinsignupfirebase;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -48,10 +49,29 @@ public class NewUser extends AppCompatActivity {
         String password = edtSignUpPassword.getText().toString().trim();
 
         if (email.isEmpty()){
-            edtSignUpEmail.setError("Please put valid email");
+            edtSignUpEmail.setError("Please put an email address");
             edtSignUpEmail.requestFocus();
             return;
         }
+
+        if(!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+            edtSignUpEmail.setError("Please put a valid email");
+            edtSignUpEmail.requestFocus();
+            return;
+        }
+
+        if (password.isEmpty()){
+            edtSignUpPassword.setError("Please put a password");
+            edtSignUpPassword.requestFocus();
+            return;
+        }
+
+        if (password.length()<6){
+            edtSignUpPassword.setError("Minimum length of a password should be 6");
+            edtSignUpPassword.requestFocus();
+            return;
+        }
+
 
     }
 }
