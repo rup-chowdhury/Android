@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.rup.signinsignupfirebase" />
+                  <option name="mobileSdkAppId" value="1:562338936457:android:4cd7b515c75c5b9dc97858" />
+                  <option name="projectId" value="signin-signup-firebase1" />
+                  <option name="projectNumber" value="562338936457" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
