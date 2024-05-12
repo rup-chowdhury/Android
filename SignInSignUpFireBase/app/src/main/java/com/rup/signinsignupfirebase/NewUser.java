@@ -58,6 +58,7 @@ public class NewUser extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(NewUser.this, MainActivity.class);
                 startActivity(i);
+                finish();
             }
         });
 
@@ -91,10 +92,12 @@ public class NewUser extends AppCompatActivity {
             return;
         }
 
+
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
+                        progressBar.setVisibility(View.GONE);
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Toast.makeText(NewUser.this, "Authentication successful.",
@@ -110,7 +113,6 @@ public class NewUser extends AppCompatActivity {
                         }
                     }
                 });
-
 
 
     }
