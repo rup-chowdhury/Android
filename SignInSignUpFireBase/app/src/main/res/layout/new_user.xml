@@ -55,6 +55,12 @@
             android:hint="@string/passwordBox"
             android:textColorHint="#5EFFFFFF"
             android:textSize="22sp" />
+        
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
         <Button
             android:id="@+id/btn_sign_up"

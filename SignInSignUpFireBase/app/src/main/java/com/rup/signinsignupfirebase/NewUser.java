@@ -6,6 +6,7 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -23,6 +24,8 @@ public class NewUser extends AppCompatActivity {
 
     Button btnSignUp, btnSignIn;
 
+    ProgressBar progressBar;
+
     FirebaseAuth mAuth;
 
     @Override
@@ -32,6 +35,8 @@ public class NewUser extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
+        progressBar = findViewById(R.id.progress_bar);
+
         edtSignUpEmail = findViewById(R.id.edt_signup_email);
         edtSignUpPassword = findViewById(R.id.edt_signup_password);
 
@@ -39,8 +44,11 @@ public class NewUser extends AppCompatActivity {
         btnSignIn = findViewById(R.id.log_in);
 
         btnSignUp.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
+
+                progressBar.setVisibility(View.VISIBLE);
                 userRegister();
             }
         });
