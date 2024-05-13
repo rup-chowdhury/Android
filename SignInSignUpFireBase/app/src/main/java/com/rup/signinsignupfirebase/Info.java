@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -41,6 +42,16 @@ public class Info extends AppCompatActivity {
         } else {
             txtEmail.setText(user.getEmail());
         }
+
+        btnLogOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                Intent i = new Intent(Info.this, MainActivity.class);
+                startActivity(i);
+                finish();
+            }
+        });
 
     }
 }
