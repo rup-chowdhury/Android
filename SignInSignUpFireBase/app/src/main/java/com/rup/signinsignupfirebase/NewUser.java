@@ -106,7 +106,7 @@ public class NewUser extends AppCompatActivity {
 
 
         mAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                .addOnCompleteListener( new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         progressBar.setVisibility(View.GONE);
@@ -116,6 +116,10 @@ public class NewUser extends AppCompatActivity {
                                     Toast.LENGTH_SHORT).show();
 
                             FirebaseUser user = mAuth.getCurrentUser();
+
+                            Intent i = new Intent(NewUser.this, MainActivity.class);
+                            startActivity(i);
+                            finish();
                         } else {
                             // If sign in fails, display a message to the user.
 
