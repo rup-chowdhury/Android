@@ -30,6 +30,6 @@ public class Info extends AppCompatActivity {
 
         btnLogOut = findViewById(R.id.btn_log_out);
 
-        
+
     }
 }
