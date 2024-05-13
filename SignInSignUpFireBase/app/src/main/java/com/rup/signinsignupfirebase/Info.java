@@ -38,6 +38,8 @@ public class Info extends AppCompatActivity {
             Intent i = new Intent(Info.this, MainActivity.class);
             startActivity(i);
             finish();
+        } else {
+            txtEmail.setText(user.getEmail());
         }
 
     }
