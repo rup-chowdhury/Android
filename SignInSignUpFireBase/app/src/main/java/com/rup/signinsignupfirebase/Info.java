@@ -2,6 +2,7 @@ package com.rup.signinsignupfirebase;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -30,6 +31,14 @@ public class Info extends AppCompatActivity {
 
         btnLogOut = findViewById(R.id.btn_log_out);
 
+
+        user = mAuth.getCurrentUser();
+
+        if (user == null){
+            Intent i = new Intent(Info.this, MainActivity.class);
+            startActivity(i);
+            finish();
+        }
 
     }
 }
