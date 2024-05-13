@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if(currentUser != null){
-            Intent i = new Intent(MainActivity.this, NewUser.class);
+            Intent i = new Intent(MainActivity.this, Info.class);
             startActivity(i);
             finish();
         }
@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         mAuth.signInWithEmailAndPassword(email, password)
-            .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+            .addOnCompleteListener( new OnCompleteListener<AuthResult>() {
         @Override
         public void onComplete(@NonNull Task<AuthResult> task) {
             progressBar.setVisibility(View.GONE);
@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Authentication Successful.",
                         Toast.LENGTH_SHORT).show();
 
-                Intent i = new Intent(MainActivity.this, NewUser.class);
+                Intent i = new Intent(MainActivity.this, Info.class);
                 startActivity(i);
                 finish();
 
